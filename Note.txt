@@ -1,0 +1,17 @@
+By following the tutorial I am building a Quiz application with HTML, CSS and JavaScript. I have the fully written code by the tutor and now I am building it my hands by understanding the concept. 
+
+Here with I've attached the full code which was written by the tutor and then I will ask questions I have. This is the code.
+
+Below are the steps in the application.
+
+01. User has a starting UI with 'Start Quiz' button and a title. 
+02. Once the user click the Start-Quiz button, the starting UI will disappear and the first question will be displayed.
+03. User can select the answer for the question and then only the button 'Next Question' button will be displayed. 
+04. User can click the 'Next Question' button and go to the next question.
+05. At the end of the quiz, the closing window will be displayed with a title, Score and 'Restart Quiz' button. 
+
+Questions.
+1. As this is a basic web application and no any web pagers how different UI are being connected. Like when the user click different buttons different UI will be loaded right. So my question is, how this is possible. 
+2. Act as a senior software engineer and advice what should be the flow of the application.
+3. Also as a senior software engineer what are the points that would do before write a single line of code. 
+
