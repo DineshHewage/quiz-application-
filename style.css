@@ -16,12 +16,17 @@ body {
 }
 
 .container {
-  width: 400px;
+  width: 600px;
   padding: 20px;
   background-color: #1e1e1e;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
+  text-align: left;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
 }
 
 h1,

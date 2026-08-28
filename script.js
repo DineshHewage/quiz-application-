@@ -1,10 +1,18 @@
 const startBtn = document.getElementById("start-btn");
 const nextBtn = document.getElementById("next-btn");
 const restartBtn = document.getElementById("restart-btn");
+const questionContainer = document.getElementById("question-container");
+const questionText = document.getElementById("question-text");
+const choiceList = document.getElementById("choices-list");
+const resultContainer = document.getElementById("result-container");
+const scoreText = document.getElementById("score");
+
+let currentQuestionIndex = 0;
+let score = 0;
 
 const questions = [
   {
-    question: "What does 'MVP' stand for in a freelance web project?",
+    question: "1. What does 'MVP' stand for in a freelance web project?",
     choices: [
       "Most Valuable Page",
       "Minimum Viable Product",
@@ -103,4 +111,19 @@ const questions = [
 
 startBtn.addEventListener("click", function () {
   startBtn.classList.add("hidden");
+  resultContainer.classList.add("hidden");
+  questionContainer.classList.remove("hidden");
+  showQuestion();
+  currentQuestionIndex = 0;
+  score = 0;
 });
+
+function showQuestion() {
+  const currtQuestion = questions[currentQuestionIndex];
+  questionText.textContent = currtQuestion.question;
+  currtQuestion.choices.forEach((choice) => {
+    const li = document.createElement("li");
+    li.textContent = choice;
+    choiceList.appendChild(li);
+  });
+}
