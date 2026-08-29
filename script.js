@@ -127,3 +127,11 @@ function showQuestion() {
     choiceList.appendChild(li);
   });
 }
+
+function selectAnswer(selectedChoice) {
+  const currentQuestion = questions[currentQuestionIndex];
+  if (selectedChoice === currentQuestion.answer) {
+    score++;
+  }
+  nextBtn.classList.remove("hidden");
+}
