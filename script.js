@@ -114,8 +114,10 @@ startBtn.addEventListener("click", function () {
   resultContainer.classList.add("hidden");
   questionContainer.classList.remove("hidden");
   showQuestion();
-  currentQuestionIndex = 0;
-  score = 0;
+});
+
+nextBtn.addEventListener("click", () => {
+  currentQuestionIndex++;
 });
 
 function showQuestion() {
