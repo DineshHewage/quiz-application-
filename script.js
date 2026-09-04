@@ -116,16 +116,18 @@ startBtn.addEventListener("click", function () {
   showQuestion();
 });
 
-nextBtn.addEventListener("click", () => {
-  currentQuestionIndex++;
-});
+// nextBtn.addEventListener("click", () => {
+//   currentQuestionIndex++;
+// });
 
 function showQuestion() {
   const currtQuestion = questions[currentQuestionIndex];
   questionText.textContent = currtQuestion.question;
+  choiceList.innerHTML = "";
   currtQuestion.choices.forEach((choice) => {
     const li = document.createElement("li");
     li.textContent = choice;
+    li.addEventListener("click", () => selectAnswer(choice));
     choiceList.appendChild(li);
   });
 }
