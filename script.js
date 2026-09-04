@@ -116,11 +116,13 @@ startBtn.addEventListener("click", function () {
   showQuestion();
 });
 
-// nextBtn.addEventListener("click", () => {
-//   currentQuestionIndex++;
-// });
+nextBtn.addEventListener("click", () => {
+  currentQuestionIndex++;
+  showQuestion(currentQuestionIndex);
+});
 
 function showQuestion() {
+  nextBtn.classList.remove("hidden");
   const currtQuestion = questions[currentQuestionIndex];
   questionText.textContent = currtQuestion.question;
   choiceList.innerHTML = "";
@@ -130,4 +132,13 @@ function showQuestion() {
     li.addEventListener("click", () => selectAnswer(choice));
     choiceList.appendChild(li);
   });
+}
+
+function selectAnswer(choice) {
+  const selectedAnswer = questions[currentQuestionIndex].answer;
+  if (selectedAnswer === choice) {
+    score++;
+    console.log(score);
+  }
+  nextBtn.classList.remove("hidden");
 }
