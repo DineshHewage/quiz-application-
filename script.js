@@ -9,6 +9,7 @@ const scoreText = document.getElementById("score");
 
 let currentQuestionIndex = 0;
 let score = 0;
+let answered = false;
 
 const questions = [
   {
@@ -122,7 +123,8 @@ nextBtn.addEventListener("click", () => {
 });
 
 function showQuestion() {
-  nextBtn.classList.remove("hidden");
+  answered = false;
+  nextBtn.classList.add("hidden");
   const currtQuestion = questions[currentQuestionIndex];
   questionText.textContent = currtQuestion.question;
   choiceList.innerHTML = "";
@@ -135,10 +137,20 @@ function showQuestion() {
 }
 
 function selectAnswer(choice) {
+  if (answered) return;
+  answered = true;
   const selectedAnswer = questions[currentQuestionIndex].answer;
   if (selectedAnswer === choice) {
     score++;
     console.log(score);
   }
+
+  const allChoices = choiceList.querySelectorAll("li");
+  allChoices.forEach((li) => {
+    li.style.pointerEvents = "none";
+    if (li.textContent === selectedAnswer) {
+      li.style.backgroundColor = "green";
+    }
+  });
   nextBtn.classList.remove("hidden");
 }
