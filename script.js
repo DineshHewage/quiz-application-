@@ -24,7 +24,7 @@ const questions = [
   },
   {
     question:
-      "Which document typically outlines the scope, deliverables, and timeline before starting freelance work?",
+      "2. Which document typically outlines the scope, deliverables, and timeline before starting freelance work?",
     choices: [
       "Invoice",
       "Proposal/SOW (Statement of Work)",
@@ -34,7 +34,7 @@ const questions = [
     answer: "Proposal/SOW (Statement of Work)",
   },
   {
-    question: "What is 'scope creep' in a freelance project?",
+    question: "3. What is 'scope creep' in a freelance project?",
     choices: [
       "A pricing strategy",
       "When a client gradually asks for more work than originally agreed",
@@ -45,12 +45,12 @@ const questions = [
   },
   {
     question:
-      "Which of these is commonly used by freelancers to track billable hours?",
+      "4. Which of these is commonly used by freelancers to track billable hours?",
     choices: ["Figma", "Toggl", "Photoshop", "Postman"],
     answer: "Toggl",
   },
   {
-    question: "What does 'responsive design' primarily ensure?",
+    question: "5. What does 'responsive design' primarily ensure?",
     choices: [
       "The website loads faster",
       "The website works well on different screen sizes and devices",
@@ -59,55 +59,55 @@ const questions = [
     ],
     answer: "The website works well on different screen sizes and devices",
   },
-  {
-    question: "In freelancing, what is a 'retainer'?",
-    choices: [
-      "A one-time payment for a finished project",
-      "A recurring fee a client pays to reserve ongoing work from you",
-      "A type of website template",
-      "A legal contract for full-time employment",
-    ],
-    answer: "A recurring fee a client pays to reserve ongoing work from you",
-  },
-  {
-    question:
-      "Which platform is commonly used by freelancers to host and version-control their code?",
-    choices: ["GitHub", "Canva", "Mailchimp", "Trello"],
-    answer: "GitHub",
-  },
-  {
-    question:
-      "What is the main purpose of a 'portfolio' website for a freelance developer?",
-    choices: [
-      "To sell physical products",
-      "To showcase past projects and skills to attract clients",
-      "To host client databases",
-      "To manage invoices",
-    ],
-    answer: "To showcase past projects and skills to attract clients",
-  },
-  {
-    question: "What does 'client onboarding' typically involve?",
-    choices: [
-      "Writing CSS animations",
-      "The process of gathering requirements and setting expectations with a new client",
-      "Deploying a website to production",
-      "Testing website performance",
-    ],
-    answer:
-      "The process of gathering requirements and setting expectations with a new client",
-  },
-  {
-    question:
-      "Which of these is a common freelance pricing model, besides hourly rates?",
-    choices: [
-      "Fixed-price per project",
-      "Random pricing",
-      "Client-set salary",
-      "Auction bidding only",
-    ],
-    answer: "Fixed-price per project",
-  },
+  // {
+  //   question: "6. In freelancing, what is a 'retainer'?",
+  //   choices: [
+  //     "A one-time payment for a finished project",
+  //     "A recurring fee a client pays to reserve ongoing work from you",
+  //     "A type of website template",
+  //     "A legal contract for full-time employment",
+  //   ],
+  //   answer: "A recurring fee a client pays to reserve ongoing work from you",
+  // },
+  // {
+  //   question:
+  //     "7. Which platform is commonly used by freelancers to host and version-control their code?",
+  //   choices: ["GitHub", "Canva", "Mailchimp", "Trello"],
+  //   answer: "GitHub",
+  // },
+  // {
+  //   question:
+  //     "8. What is the main purpose of a 'portfolio' website for a freelance developer?",
+  //   choices: [
+  //     "To sell physical products",
+  //     "To showcase past projects and skills to attract clients",
+  //     "To host client databases",
+  //     "To manage invoices",
+  //   ],
+  //   answer: "To showcase past projects and skills to attract clients",
+  // },
+  // {
+  //   question: "9. What does 'client onboarding' typically involve?",
+  //   choices: [
+  //     "Writing CSS animations",
+  //     "The process of gathering requirements and setting expectations with a new client",
+  //     "Deploying a website to production",
+  //     "Testing website performance",
+  //   ],
+  //   answer:
+  //     "The process of gathering requirements and setting expectations with a new client",
+  // },
+  // {
+  //   question:
+  //     "10. Which of these is a common freelance pricing model, besides hourly rates?",
+  //   choices: [
+  //     "Fixed-price per project",
+  //     "Random pricing",
+  //     "Client-set salary",
+  //     "Auction bidding only",
+  //   ],
+  //   answer: "Fixed-price per project",
+  // },
 ];
 
 startBtn.addEventListener("click", function () {
@@ -141,8 +141,9 @@ function selectAnswer(choice) {
   answered = true;
   const selectedAnswer = questions[currentQuestionIndex].answer;
   if (selectedAnswer === choice) {
-    score++;
-    console.log(score);
+    // score++;
+    score += 1;
+    // console.log(score);
   }
 
   const allChoices = choiceList.querySelectorAll("li");
@@ -152,5 +153,16 @@ function selectAnswer(choice) {
       li.style.backgroundColor = "green";
     }
   });
-  nextBtn.classList.remove("hidden");
+
+  if (currentQuestionIndex + 1 === questions.length) {
+    showResult();
+  } else {
+    nextBtn.classList.remove("hidden");
+  }
+}
+
+function showResult() {
+  questionContainer.classList.add("hidden");
+  resultContainer.classList.remove("hidden");
+  scoreText.textContent = `Your Score is : ${score}`;
 }
