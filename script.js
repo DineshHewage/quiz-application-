@@ -97,17 +97,17 @@ const questions = [
     answer:
       "The process of gathering requirements and setting expectations with a new client",
   },
-  {
-    question:
-      "10. Which of these is a common freelance pricing model, besides hourly rates?",
-    choices: [
-      "Fixed-price per project",
-      "Random pricing",
-      "Client-set salary",
-      "Auction bidding only",
-    ],
-    answer: "Fixed-price per project",
-  },
+  // {
+  //   question:
+  //     "10. Which of these is a common freelance pricing model, besides hourly rates?",
+  //   choices: [
+  //     "Fixed-price per project",
+  //     "Random pricing",
+  //     "Client-set salary",
+  //     "Auction bidding only",
+  //   ],
+  //   answer: "Fixed-price per project",
+  // },
 ];
 
 startBtn.addEventListener("click", function () {
