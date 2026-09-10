@@ -69,3 +69,14 @@ button:hover {
 .hidden {
   display: none;
 }
+
+#result-container {
+  text-align: center;
+}
+
+#score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6200ea;
+  margin: 15px 0;
+}
