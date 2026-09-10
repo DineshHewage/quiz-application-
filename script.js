@@ -59,55 +59,55 @@ const questions = [
     ],
     answer: "The website works well on different screen sizes and devices",
   },
-  // {
-  //   question: "6. In freelancing, what is a 'retainer'?",
-  //   choices: [
-  //     "A one-time payment for a finished project",
-  //     "A recurring fee a client pays to reserve ongoing work from you",
-  //     "A type of website template",
-  //     "A legal contract for full-time employment",
-  //   ],
-  //   answer: "A recurring fee a client pays to reserve ongoing work from you",
-  // },
-  // {
-  //   question:
-  //     "7. Which platform is commonly used by freelancers to host and version-control their code?",
-  //   choices: ["GitHub", "Canva", "Mailchimp", "Trello"],
-  //   answer: "GitHub",
-  // },
-  // {
-  //   question:
-  //     "8. What is the main purpose of a 'portfolio' website for a freelance developer?",
-  //   choices: [
-  //     "To sell physical products",
-  //     "To showcase past projects and skills to attract clients",
-  //     "To host client databases",
-  //     "To manage invoices",
-  //   ],
-  //   answer: "To showcase past projects and skills to attract clients",
-  // },
-  // {
-  //   question: "9. What does 'client onboarding' typically involve?",
-  //   choices: [
-  //     "Writing CSS animations",
-  //     "The process of gathering requirements and setting expectations with a new client",
-  //     "Deploying a website to production",
-  //     "Testing website performance",
-  //   ],
-  //   answer:
-  //     "The process of gathering requirements and setting expectations with a new client",
-  // },
-  // {
-  //   question:
-  //     "10. Which of these is a common freelance pricing model, besides hourly rates?",
-  //   choices: [
-  //     "Fixed-price per project",
-  //     "Random pricing",
-  //     "Client-set salary",
-  //     "Auction bidding only",
-  //   ],
-  //   answer: "Fixed-price per project",
-  // },
+  {
+    question: "6. In freelancing, what is a 'retainer'?",
+    choices: [
+      "A one-time payment for a finished project",
+      "A recurring fee a client pays to reserve ongoing work from you",
+      "A type of website template",
+      "A legal contract for full-time employment",
+    ],
+    answer: "A recurring fee a client pays to reserve ongoing work from you",
+  },
+  {
+    question:
+      "7. Which platform is commonly used by freelancers to host and version-control their code?",
+    choices: ["GitHub", "Canva", "Mailchimp", "Trello"],
+    answer: "GitHub",
+  },
+  {
+    question:
+      "8. What is the main purpose of a 'portfolio' website for a freelance developer?",
+    choices: [
+      "To sell physical products",
+      "To showcase past projects and skills to attract clients",
+      "To host client databases",
+      "To manage invoices",
+    ],
+    answer: "To showcase past projects and skills to attract clients",
+  },
+  {
+    question: "9. What does 'client onboarding' typically involve?",
+    choices: [
+      "Writing CSS animations",
+      "The process of gathering requirements and setting expectations with a new client",
+      "Deploying a website to production",
+      "Testing website performance",
+    ],
+    answer:
+      "The process of gathering requirements and setting expectations with a new client",
+  },
+  {
+    question:
+      "10. Which of these is a common freelance pricing model, besides hourly rates?",
+    choices: [
+      "Fixed-price per project",
+      "Random pricing",
+      "Client-set salary",
+      "Auction bidding only",
+    ],
+    answer: "Fixed-price per project",
+  },
 ];
 
 startBtn.addEventListener("click", function () {
