@@ -97,17 +97,17 @@ const questions = [
     answer:
       "The process of gathering requirements and setting expectations with a new client",
   },
-  // {
-  //   question:
-  //     "10. Which of these is a common freelance pricing model, besides hourly rates?",
-  //   choices: [
-  //     "Fixed-price per project",
-  //     "Random pricing",
-  //     "Client-set salary",
-  //     "Auction bidding only",
-  //   ],
-  //   answer: "Fixed-price per project",
-  // },
+  {
+    question:
+      "10. Which of these is a common freelance pricing model, besides hourly rates?",
+    choices: [
+      "Fixed-price per project",
+      "Random pricing",
+      "Client-set salary",
+      "Auction bidding only",
+    ],
+    answer: "Fixed-price per project",
+  },
 ];
 
 startBtn.addEventListener("click", function () {
@@ -164,5 +164,13 @@ function selectAnswer(choice) {
 function showResult() {
   questionContainer.classList.add("hidden");
   resultContainer.classList.remove("hidden");
-  scoreText.textContent = `Your Score is : ${score}`;
+  scoreText.textContent = `You scored ${score} out of ${questions.length}`;
 }
+
+restartBtn.addEventListener("click", () => {
+  currentQuestionIndex = 0;
+  score = 0;
+  resultContainer.classList.add("hidden");
+  questionContainer.classList.remove("hidden");
+  showQuestion();
+});
